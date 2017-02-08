@@ -1,18 +1,192 @@
+html, body, h1, h2, h3, h4, a{
+    margin: 0;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
 html, body{
     height: 100%;
 }
 
-#draw{
-    position:absolute;
-    top:0%;
-    left:0%;
-    margin:0px;
-    padding:0px;
-    z-index:-1;
+a{
+    font-size: 20px;
+    color: deepskyblue;
 }
 
-hr.styled {
-    border: 0 ;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+h1{
+    font-weight: bold;
+    font-size: 80px;
+}
+
+h2{
+    font-weight: 100;
+    font-size: 60px;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 30px;
+}
+
+h4{
+    font-weight: 100;
+    font-size: 25px;
+}
+
+#left-img{
+    background-image: url(/img/LF1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 25%;
+	height: 100%;
+	position: absolute;
+	z-index: -99999;
+}
+
+.profile{
+    position: absolute;
+    left: 30%;
+    top: 5%;
+}
+
+.profile-desc{
+    margin-top: 1em;
+}
+
+.menu{
+    margin-top: 2em;
+}
+
+.menu a{
+    margin-right: 0.5em;
+    font-size: 25px;
+}
+
+.menu-social{
+    margin-top: 2em;
+}
+
+.menu-social a{
+    font-size: 30px;
+    margin-right: 0.5em;
+
+}
+
+.no-padding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.fade-top{
+    animation-name: fadeTop;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+}
+
+.center{
+    text-align: center;
+}
+
+.fade-img{
+    animation-name: leftImg;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 2s;
+}
+
+.fade-right{
+    white-space: nowrap;
+    
+    animation-name: fadeRight;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.85s;
+}
+
+.fade-left{
+    animation-name: fadeLeft;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.85s;
+}
+
+.element-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 766px) {
+    h1{
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 30px;
+    }
+    
+    .profile-name{
+        text-align: center;
+    }
+    
+    .element-mobile{
+        display: block;
+        float: none;
+        margin: 0 auto;
+        width: 50%;
+        height: 50%;
+    }
+}
+
+@keyframes fadeTop{
+    0% {
+        transform: translateY(200%);
+        opacity:0;
+    }
+    
+    50% {
+        transform: translateY(200%);
+        opacity:0;
+    }
+    
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeLeft {
+    
+    0% {
+        transform: translateX(-250%);
+        opacity:0;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes leftImg {
+    
+    0% {
+        opacity:0;
+    }
+    50% {
+        opacity:0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
